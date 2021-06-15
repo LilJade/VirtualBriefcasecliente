@@ -1,0 +1,48 @@
+@import "../../../scss/index.scss";
+
+.edit-Project-form {
+  padding: 0 20px 20px 20px;
+  .portada {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    background-color: $background-dark-light;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: -20px !important;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    svg {
+      width: 50px;
+      fill: $font-light;
+      &:hover {
+        fill: $font-dark;
+      }
+    }
+  }
+  span {
+    font-weight: bold;
+  }
+
+  .btn-submit {
+    position: absolute;
+    top: -44px;
+    right: 25px;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 4px 15px 4px 15px;
+    background-color: $primary;
+    border: none;
+
+    &:hover {
+      background-color: $primary;
+      opacity: 0.6;
+    }
+  }
+}

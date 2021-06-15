@@ -1,0 +1,24 @@
+@import "../../scss/index.scss";
+
+.list-Proyectos {
+}
+.proyect {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $secundary;
+  color: $font-dark;
+  width: 25%;
+  border-radius: 5px;
+  margin: 20px;
+  .portada {
+    background-color: $primary-grey;
+    height: 30%;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  span {
+    color: $font-grey;
+    font-size: 12px;
+  }
+}

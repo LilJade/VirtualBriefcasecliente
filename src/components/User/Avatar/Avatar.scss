@@ -1,0 +1,39 @@
+@import "../../../scss/index.scss";
+
+.avatar {
+  position: relative;
+  background-color: $background-dark-light;
+  height: 200px;
+  width: 200px;
+  border: 4px solid $border-dark;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto;
+
+  .options {
+    position: absolute;
+    bottom: -225px;
+
+    button {
+      border: 0;
+      border-radius: 50px;
+      background-color: $secundary;
+      width: 160px;
+      &.unfollow {
+        &:hover {
+          border-color: $danger;
+          background-color: $danger;
+
+          &::before {
+            content: "Dejar de seguir";
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

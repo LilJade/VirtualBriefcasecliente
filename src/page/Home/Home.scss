@@ -1,0 +1,159 @@
+@import "../../scss/index.scss";
+
+.home {
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    box-sizing: border-box;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .coverPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: $primary;
+  }
+
+  .space {
+    width: 100%;
+  }
+
+  .space .stripe {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 100px;
+    padding: 10px 0;
+    padding-left: 220px;
+    background-color: #867ae9;
+  }
+
+  .space .stripe h2 {
+    font-family: monospace;
+    font-size: 56px;
+  }
+
+  .space .stripe p {
+    font-size: 24px;
+  }
+
+  .space .vbInf {
+    display: flex;
+    flex-direction: column;
+    margin-top: -250px;
+    width: 100%;
+    padding: 10px 0;
+    padding-left: 220px;
+  }
+
+  .space .vbInf .text {
+    font-size: 22px;
+    margin: 18px 0;
+  }
+
+  .btn {
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    padding: 8px;
+    margin: 8px;
+    width: 160px;
+  }
+
+  .neutro {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .offert {
+    background-color: #bb371a;
+    color: #fff;
+  }
+
+  .coverPageImg {
+    position: relative;
+    width: 300px;
+    top: -250px;
+    left: 700px;
+  }
+
+  .container .cards {
+    color: $font-dark;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    padding-bottom: 20px;
+    background-color: $secundary;
+    border-radius: 20px;
+  }
+
+  .cards .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 23%;
+    padding: 10px;
+    background-color: #e1e5ea;
+    border-radius: 10px;
+    margin: 0 5px;
+  }
+
+  .cards .card img {
+    width: 150px;
+    margin: 20px 5px;
+  }
+
+  .cards .card span {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0;
+    margin-bottom: 20px;
+  }
+
+  .cards .card p {
+    font-size: 18px;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .container .cardExtra {
+    color: $font-dark;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 70%;
+    padding: 20px;
+    background-color: #e1e5ea;
+    border-radius: 10px;
+    margin-bottom: 70px;
+  }
+
+  .container .cardExtra p {
+    font-size: 20px;
+    width: 70%;
+    margin-bottom: 10px;
+  }
+
+  .container .cardExtra img {
+    width: 150px;
+    margin-left: 30px;
+  }
+}

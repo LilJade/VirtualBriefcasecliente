@@ -1,0 +1,87 @@
+@import "../../scss/index.scss";
+.signin-signup {
+  padding: 0px 300px;
+  min-height: 100vh;
+
+  .titulo {
+    color: $font-light;
+    margin-bottom: 30px;
+    h2 {
+      margin: 0 0 0 0;
+      font-size: 45px;
+    }
+    h1 {
+      margin: 0 0 0 0;
+      font-size: 80px;
+    }
+  }
+
+  &__izquierdo {
+    overflow: hidden;
+    background-color: $primary-light;
+    box-shadow: 2px 9px 49px -17px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      position: relative;
+      width: 70%;
+      right: -80px;
+    }
+
+    div {
+      h2 {
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        margin-bottom: 40px;
+        font-weight: bold;
+
+        svg {
+          margin-right: 20px;
+          font-size: 30px;
+          width: 40px !important;
+        }
+      }
+    }
+  }
+
+  &__derecho {
+    overflow: hidden;
+    background-color: $background-light;
+    box-shadow: 2px 9px 49px -17px rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+
+    div {
+      color: $font-dark;
+      margin-top: 20px;
+      h1 {
+        display: flex;
+        align-items: center;
+        font-size: 60px;
+        font-weight: bold;
+      }
+      h2 {
+        display: flex;
+        align-items: center;
+        font-size: 22px;
+        margin: 40px 0px 0px 0;
+      }
+      a {
+        font-size: 15px;
+
+        color: $font-dark !important;
+        &:hover {
+          cursor: pointer;
+          color: $primary !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../scss/index.scss";
+
+.error404 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  img {
+    width: 700px;
+  }
+  a {
+    margin-top: 30px;
+    color: $font-light;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}

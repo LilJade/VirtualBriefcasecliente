@@ -1,0 +1,56 @@
+@import "../../../scss/index.scss";
+
+.proyecto-modal {
+  .modal-content {
+    border-radius: 25px;
+    overflow: hidden;
+    .modal-header {
+      border-bottom: 1px solid $border-grey;
+      padding: 15px;
+
+      .modal-title {
+        display: flex;
+        align-items: center;
+        color: $font-dark;
+        h2 {
+          margin-left: 10px;
+          font-size: 20px;
+        }
+        svg {
+          width: 15px;
+          height: 15px;
+          fill: $primary;
+          margin-left: 10px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .modal-body {
+      padding: 0;
+      form {
+        padding: 0 20px 20px 20px;
+        input {
+          margin-top: 10px;
+        }
+        button {
+          margin-top: 20px;
+          border: 0;
+          border-radius: 50px;
+          background-color: $secundary;
+          width: 160px;
+        }
+        .count {
+          color: $font-dark;
+          margin: 15px;
+
+          &.error {
+            color: $danger;
+          }
+        }
+      }
+    }
+  }
+}

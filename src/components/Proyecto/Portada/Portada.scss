@@ -1,0 +1,30 @@
+@import "../../../scss/index.scss";
+
+.portada {
+  position: relative;
+  background-color: $background-dark-light;
+  height: 220px;
+  margin-bottom: 60px !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  border-radius: 10px;
+  .options {
+    position: absolute;
+    bottom: -50px;
+    right: 15px;
+
+    button {
+      border-radius: 50px;
+      background-color: $primary;
+      width: 150px;
+      border: none;
+
+      &:hover {
+        background-color: $primary;
+        opacity: 0.6;
+      }
+    }
+  }
+}

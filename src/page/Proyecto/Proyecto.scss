@@ -1,0 +1,16 @@
+@import "../../scss/index.scss";
+
+.proyecto {
+  background-color: $background-light;
+  margin-top: 30px;
+  border-radius: 20px;
+  color: $font-dark;
+  &__title {
+    padding: 15px;
+    h2 {
+      font-size: 22px;
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+  }
+}

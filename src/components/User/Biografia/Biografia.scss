@@ -1,0 +1,60 @@
+@import "../../../scss/index.scss";
+
+.biografia-data {
+  margin: 3px;
+  color: $font-dark;
+  * {
+    margin: 0;
+  }
+  .redes {
+    border: solid 2px $primary-grey;
+    height: 300px;
+    * {
+      margin-top: 10px;
+      margin-left: 30px;
+    }
+    svg {
+      width: 25px;
+      height: 25px;
+      fill: $font-grey;
+    }
+    h2 {
+      font-size: 32px;
+    }
+    h3 {
+      font-size: 20px;
+      color: $font-grey;
+      margin-top: -8 px;
+    }
+
+    .datos {
+      p {
+        color: $font-grey;
+        font-size: 20px;
+        margin-left: -40px !important;
+      }
+      svg {
+        margin-right: 5px;
+      }
+    }
+  }
+  .herramientas {
+    border: solid 2px $primary-grey;
+    height: 300px;
+  }
+  .biografia {
+    margin-top: 18px;
+    margin-left: 10px;
+    border: solid 2px $primary-grey;
+    height: 100px;
+    width: 80vh;
+
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      color: $font-grey;
+      font-size: 20px;
+    }
+  }
+}

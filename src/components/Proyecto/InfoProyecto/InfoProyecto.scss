@@ -1,0 +1,46 @@
+@import "../../../scss/index.scss";
+
+.info-Proyecto {
+  margin: 20px;
+  border-top: 1px solid $border-grey;
+  border-bottom: 1px solid $border-grey;
+  * {
+    margin: 0;
+  }
+
+  svg {
+    width: 25px;
+    height: 25px;
+    fill: $font-grey;
+  }
+
+  .titulos {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .empresa {
+    font-size: 20px;
+    color: $font-grey;
+  }
+  .descripcion {
+    margin: 10px 0;
+    white-space: pre-line;
+  }
+  .more-info {
+    display: flex;
+    align-items: center;
+
+    p,
+    a {
+      color: $font-grey;
+      padding-right: 20px;
+      svg {
+        margin-right: 10px;
+      }
+    }
+    a {
+      color: $primary;
+    }
+  }
+}

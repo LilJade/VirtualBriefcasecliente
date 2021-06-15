@@ -1,0 +1,26 @@
+@import "../../scss/index.scss";
+
+.proyectos {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  h2 {
+    border: solid 2px $border-light;
+    width: 300px;
+    margin-left: 400px;
+    margin-top: 10px;
+  }
+  .agregar {
+    position: relative;
+    right: -240px;
+    background-color: $primary-light;
+    border: none;
+
+    padding-bottom: 0;
+
+    svg {
+      width: 40px !important;
+      height: 30px;
+    }
+  }
+}
