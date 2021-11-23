@@ -10,6 +10,7 @@ import SignInForm from "../../components/SignInForm";
 
 
 export default function SignInSingup(props){
+    console.log(props)
     const {setRefreshCheckLogin} = props;
     const [showModal, setShowModal] = useState(false)
     const [contentModal, setContentModal] = useState(null)

@@ -64,31 +64,86 @@ export function getProyectoApi(id){
     })
 }
 
-export function uploadPortadaApi(file,ids){
-    const url= `${API_HOST}/updatePortada`
-
+export function uploadPortadaApi(file, ids){
+    const url = `${API_HOST}/updatePortada`;
     const formData = new FormData();
     formData.append("portada", file);
-    formData.append("id", ids)
-    console.log(formData.keys)
+    formData.append("id", ids);
     const params = {
         method: "POST",
         headers:{
-            "Content-Type":"application/json",
             Authorization: `Bearer ${getTokenApi()}`
         },
         body: formData
-    
     }
-
-    return fetch(url, params)
-    .then(response =>{
+    return fetch(url,params)
+    .then(response => {
         return response.json();
     })
     .then(result => {
-        return result;
+        return result
     })
-    .catch(err=>{
+    .catch(err =>{
         return err;
     })
+}
+
+export function updateInfoProyectoApi(data){
+    const url = `${API_HOST}/updateProject`;
+    const params = {
+        method: "PUT",
+        headers:{
+            Authorization: `Bearer ${getTokenApi()}`
+        },
+        body: JSON.stringify(data)
+    };
+
+    return fetch(url, params)
+    .then(response => {
+        return response;
+    })
+    .catch(err => {
+        return err;
+    })
+}
+
+export function getProyectosSeguidores(page){
+    const url = `${API_HOST}/seeFProjects?pagina=${page}`;
+    const params ={
+        headers:{
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${getTokenApi()}`
+        }
+    }
+
+    return fetch(url, params)
+    .then((response) => {
+        return response.json();
+    })
+    .catch((err) => {
+        return err;
+    })
+}
+
+export function DeleteProyecto(id){
+    const url = `${API_HOST}/delProject?id=${id}`;
+
+    const params = {
+        method: "DELETE",
+        headers:{
+            Authorization: `Bearer ${getTokenApi()}`
+        }
+    }
+
+    return fetch(url,params)
+    .then(response =>{
+        return response.json();
+    })
+    .then(result =>{
+        return result;
+    })
+    .catch(err =>{
+        return err
+    });
+
 }

@@ -1,0 +1,44 @@
+@import "../../scss/index.scss";
+
+.proyects {
+  background-color: $background-light !important;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 60px;
+}
+.proyectl {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  background-color: $secundary;
+  color: $font-dark;
+  width: 300px;
+  height: 350px;
+  border-radius: 5px;
+  margin: 20px;
+  justify-content: center;
+  .portadas {
+    background-color: $primary-grey;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
+  h4 {
+    color: $font-grey;
+    font-size: 12px;
+  }
+  &:hover {
+    color: $font-dark;
+    background-color: #b4b4ec77;
+    text-decoration: none;
+  }
+}

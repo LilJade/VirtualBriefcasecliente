@@ -1,7 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import "./Proyecto.scss"
 import BasicLayout from "../../layout/BasicLayout"
-import {Button, Spinner} from "react-bootstrap";
 import {withRouter}from "react-router-dom"
 import {getProyectoApi} from "../../api/proyecto"
 import Swal from 'sweetalert2';
@@ -12,7 +11,6 @@ import InfoUser from "../../components/Proyecto/InfoProyecto"
 function Proyecto(props) {
     const{setRefreshCheckLogin, match} = props
     const [proyecto, setProyecto] = useState(null)
-    const [user, setUser] = useState(null)
     const {params} = match;
     const loggedUser= useAuth()
     

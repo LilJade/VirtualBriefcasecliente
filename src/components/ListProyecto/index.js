@@ -1,1 +1,1 @@
-export {default} from "./ListProyectos"
+export {default} from "./ListProyecto"

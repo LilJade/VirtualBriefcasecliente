@@ -9,7 +9,7 @@ export default function Proyectos(props) {
     const [showModal, setShowModal] = useState(false)
     const { loggedUsers, user} = props;
     return (
-        <div className="proyectos">
+        <div className="proyectosa">
             <h2 align="center" >Mis Proyectos</h2> 
             
             

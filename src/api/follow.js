@@ -1,4 +1,3 @@
-import { result } from "lodash-es";
 import {API_HOST} from "../utils/constant";
 import {getTokenApi} from "./auth";
 

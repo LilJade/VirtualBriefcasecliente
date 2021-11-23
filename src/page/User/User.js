@@ -11,7 +11,7 @@ import InfoUser from "../../components/User/InfoUser";
 import Biografia from "../../components/User/Biografia";
 import Proyectos from '../../components/Proyectos';
 import ListProyecto  from '../../components/ListProyecto';
-import {getUserProyectoApi} from "../../api/proyecto"
+import { getUserProyectoApi} from "../../api/proyecto"
 
  function User(props) {
     const {match,setRefreshCheckLogin} = props;
@@ -19,7 +19,8 @@ import {getUserProyectoApi} from "../../api/proyecto"
     const {params} = match;
     const [proyectos, setProyectos] = useState(null)
     const loggedUsers = useAuth();
-
+    const [loadingProyecto, setLoadingProyecto] = useState(false)
+    const [page, setPage] = useState(1)
     
 
     useEffect(() => {
@@ -50,6 +51,21 @@ import {getUserProyectoApi} from "../../api/proyecto"
         setProyectos([])
     })
   }, [params])
+
+  const moreData = () =>{
+      const pageTemp = page +1 ;
+      setLoadingProyecto(true);
+      getUserProyectoApi(params.id, pageTemp).then(response =>{
+          if (!response){
+            setLoadingProyecto(0);
+          }else {
+              setProyectos([...proyectos, ...response]);
+            setPage(pageTemp)
+            setLoadingProyecto(false)
+          }
+
+      })
+  }
   
     return (
         <BasicLayout className="user" setRefreshCheckLogin={setRefreshCheckLogin}>
@@ -73,6 +89,15 @@ import {getUserProyectoApi} from "../../api/proyecto"
             </div>
             <div className="user__Proyectos">
             {proyectos && <ListProyecto proyectos={proyectos}/>}
+            
+            <Button onClick={moreData}>
+               {!loadingProyecto ? (
+                loadingProyecto !== 0 && "Obtener mas proyectos"
+               ) : (
+                <Spinner as="span" animation="grow" size="sm" role="status" 
+                aria-hidden="true"/>
+               )}
+            </Button>
             </div>
         </BasicLayout>
     )

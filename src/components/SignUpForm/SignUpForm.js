@@ -11,6 +11,7 @@ export default function SignUpForm(props) {
     const{setShowModal}= props;
     const[formData, setFormData]= useState(initialFormValue());
     const [signUpLoading, setSignUpLoading] = useState(false)
+    
     const onSubmit = e =>{
         e.preventDefault();
 

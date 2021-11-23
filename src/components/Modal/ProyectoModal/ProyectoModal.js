@@ -1,11 +1,10 @@
 import React, {useState} from 'react'
-import {Modal, Form, Button} from "react-bootstrap";
+import {Modal, Form, Button, Row, Col} from "react-bootstrap";
 import "./ProyectoModal.scss"
 import {Close} from "../../../utils/Icons";
 import classNames from "classnames"
 import {addProyectoApi} from "../../../api/proyecto"
 import Swal from 'sweetalert2';
-
 export default function ProyectoModal(props) {
     const {show, setShow} = props;
     const [titulos, setTitulos] = useState("")
@@ -58,8 +57,16 @@ export default function ProyectoModal(props) {
                             <Form.Control type="text" onChange={e =>  setTitulos(e.target.value)} placeholder="Titulo" name="titulo" defaultValue={formData.titulo}/>
                             <span className={classNames("count", {error:titulos.length>maxLength })}>{titulos.length}</span>
                             <Form.Control type="text" placeholder="Empresa" name="empresa" defaultValue={formData.empresa} />
-
+                            <Row>
+                                <Col>
+                                <Form.Control type="text" placeholder="GitHub" name="github" defaultValue={formData.github} />
+                                </Col>
+                                <Col>
+                                <Form.Control type="text" placeholder="Sitio Web" name="sitioWeb" defaultValue={formData.sitioWeb} />
+                                </Col>
+                            </Row>
                     <Form.Control as="textarea" rows="2" type="text" placeholder="Descripcion del proyecto" name="descripcion" defaultValue={formData.descripcion} />
+                
                     <Button 
                     disabled={titulos.length>maxLength || titulos.length < 1}
                     type="submit">Agregar</Button>
@@ -72,6 +79,8 @@ function initialValue(){
     return{
         titulo: "",
         empresa: "",
-        descripcion: ""
+        descripcion: "",
+        github: "",
+        sitioWeb: ""
     }
 }

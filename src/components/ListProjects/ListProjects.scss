@@ -1,0 +1,29 @@
+@import "../../scss/index.scss";
+
+.lista-proyectss {
+  padding: 0;
+  .project {
+    padding: 10px 20px;
+    border-bottom: 1px solid $border-grey;
+    margin-right: 100px;
+    color: $font-dark;
+
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+      background-color: rgba(124, 123, 123, 0.2);
+    }
+    .avatars {
+      margin-right: 20px;
+    }
+    .name {
+      font-weight: bold;
+      span {
+        margin-left: 10px;
+        font-size: 12px;
+        font-weight: normal;
+        color: $font-grey;
+      }
+    }
+  }
+}

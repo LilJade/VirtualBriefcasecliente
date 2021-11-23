@@ -8,7 +8,6 @@ import moment from 'moment';
 
 export default function InfoProyecto(props) {
     const {proyecto} = props;
-    console.log(proyecto)
     return (
         <div className="info-Proyecto">
           <h2 className="titulos">Proyecto: {proyecto?.titulo}</h2>
